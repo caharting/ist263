@@ -9,3 +9,10 @@ padding: 10px;
 margin-bottom: 30px;}
 nav a {color: #283618;}
 nav a:hover {background-color: #dda15e;}
+@media only screen and (max-width: 768px) {
+    a {width: 100%;
+    display: block;
+padding-bottom: 15px;}
+    .pipe1, .pipe2 {display: none;}
+
+}
