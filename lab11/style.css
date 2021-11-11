@@ -13,7 +13,7 @@ nav a:hover {background-color: #dda15e;}
     a {width: 100%;
     display: block;
 padding-bottom: 15px;}
-    .pipe1, .pipe2 {display: none; color: white;}
+    .pipe1, .pipe2 {display: none;}
 
 }
 p {font-size: 20px;}
@@ -26,3 +26,4 @@ h2 {font-size: 25px;}
         left: 10px; /* move the skip back on screen when it is tabbed to */
         background-color: orange;
     }
+    .pipe1, .pipe2 {color: white}
