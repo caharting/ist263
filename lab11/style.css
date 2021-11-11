@@ -8,7 +8,7 @@ nav {background-color: #63330a;
 padding: 10px;
 margin-bottom: 30px;}
 nav a {color: white;}
-nav a:hover {background-color: #dda15e;}
+nav a:hover {background-color: #579b5c;}
 @media only screen and (max-width: 768px) {
     a {width: 100%;
     display: block;
