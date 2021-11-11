@@ -7,7 +7,7 @@ h1 {color: #335367;font-size: 30px;}
 nav {background-color: #bc6c25;
 padding: 10px;
 margin-bottom: 30px;}
-nav a {color: blue;}
+nav a {color: white;}
 nav a:hover {background-color: #dda15e;}
 @media only screen and (max-width: 768px) {
     a {width: 100%;
