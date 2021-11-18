@@ -9,8 +9,8 @@
         p {text-align: center;
         padding-left: 120px;
         padding-right: 120px;
-        font-family:sans-serif;}
-        h1 {text-align: center;}
+        font-family:Arial, Helvetica, sans-serif;}
+        h1 {text-align: center; font-family: Verdana, Geneva, Tahoma, sans-serif;}
         .img1, .img2, .img3 {
             display: block;
             margin: 0 auto;
@@ -28,20 +28,42 @@
   border-bottom: 1px solid navy;
   border-left: 1px solid #CCCCCC;
     border-radius: 1em;}
-    nav {background-color: #0069aa;
-    padding: 15px;}
+    nav {
+    padding: 15px; text-align: right; flex-basis: 50%;}
     footer {background-color: #0069aa;}
     footer p {color: white;
     padding: 15px;}
-        @media only screen and (max-width: 768px) {p {padding: 20px};}
+        @media only screen and (max-width: 768px) {p {padding: 25px};}
+    .container {display: flex; background-color: #0069aa;}
+    .search {flex-basis: 50%; background-color: #0069aa; display: flex;}
+    nav a:hover {background-color: #CCCCCC;}
+    .paws, .paws2, .paws3, .paws4 {width: 100%;}
+    .paws {justify-content: left;}
     </style>
+    <script async src="https://cse.google.com/cse.js?cx=12b56f6c5b6394f36"></script>
 </head>
 <body>
-    <nav>
-        <a class="button1" href="homepage.html">Home</a>
-        <a class="button2" href="dogs.html">View Our Dogs</a>
-        <a class="button3" href="cats.html">View Our Cats</a>
-    </nav>
+    <div class="container">
+        <div class="search">
+            <div>
+                <img src="images/pawprints.png" alt="Paw prints" class="paws">
+            </div>
+            <div>
+                <img src="images/pawprints.png" alt="Paw prints" class="paws2">
+            </div>
+            <div>
+                <img src="images/pawprints.png" alt="Paw prints" class="paws3">
+            </div>
+            <div>
+                <img src="images/pawprints.png" alt="Paw prints" class="paws4">
+            </div>
+        </div>
+        <nav>
+            <a class="button1" href="homepage.html">Home</a>
+            <a class="button2" href="dogs.html">View Our Dogs</a>
+            <a class="button3" href="cats.html">View Our Cats</a>
+        </nav>
+    </div>
     <main>
         <section>
         <h1>ABOUT US</h1>
