@@ -5,19 +5,110 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Our Dogs</title>
-    <script async src="https://cse.google.com/cse.js?cx=55b5e5e57aa1318fe"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <style>
+        
+         #hamicon {display: none; width: 40px;} 
+        p {text-align: center;
+        padding-left: 120px;
+        padding-right: 120px;
+        font-family: 'Spartan', sans-serif;}
+        h2 {text-align: center; font-family: 'Staatliches', cursive; font-size: 30px;}
+        img {display: block;
+            margin: 0 auto;
+        max-width: 100%;}
+        .button1, .button2, .button3 {font-family: 'Staatliches', cursive;
+  text-decoration: none;
+  background-color:white;
+  color: #0069aa;
+  padding: 8px 10px 8px 10px;
+  border-top: 1px solid #CCCCCC;
+  border-right: 1px solid navy;
+  border-bottom: 1px solid navy;
+  border-left: 1px solid #CCCCCC;
+    border-radius: 1em;}
+    nav {
+    padding: 15px; text-align: right; flex-basis: 50%; display: flex; justify-content: right; background-color: #0069aa;}
+    @media only screen and (max-width: 768px) {p {padding: 25px};}
+    @media only screen and (max-width: 768px) {.paws, .paws2, .paws3, .paws4 {display: none};}
+    @media only screen and (max-width: 768px) {
+                #hamicon {display: block; width: 80px;} /* turns hamburger on at smaller screen size */
+                nav a{
+                    display: block;
+                    padding: 5px 1px;
+                    }
+                #navlinks {display: none;} /* turn off stacked nav when screen is small */
+            }
+    @media only screen and (min-width: 769px) {#navlinks {display: flex}}
+    .search {flex-basis: 50%; background-color: #0069aa; display: flex;}
+    nav a:hover {background-color: #CCCCCC;}
+
+    #modal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            margin-top: -120px;
+            margin-left: -120px;
+            background-color: white;
+            box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0.6);
+            display: none;
+        }
+        #closemodal {
+            cursor: pointer;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .button {
+            background-color: #75b0d4;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 1em;
+        }
+        .button a {color: white;}
+    </style>
+    <script>
+        function turnNavOnOff () {
+            /* check to see if nave is on or off when we run this function */
+           if (document.getElementById("navlinks").style.getPropertyValue("display") 
+           == 'block') {
+               document.getElementById("navlinks").style.display = "none";
+           }
+           else (document.getElementById("navlinks").style.display = "block")
+        }
+        function OpenModal() {
+            document.getElementById("modal").style.display = 'block';
+        }
+        function CloseModal() {
+            document.getElementById("modal").style.display = 'none';
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <nav>
-            <a href="homepage.html">Home</a>
-            <a href="dogs.html">Dogs</a>
-            <a href="cats.html">Cats</a>
+    <nav>
+        <img src="images/hamburger.png" alt="hamburger icon" id="hamicon" onclick="turnNavOnOff ();" class="hamburger">
+            <div id="navlinks">
+                <div class="home">
+                    <a class="button1" href="homepage.html">Home</a>
+                </div>
+                <div class="dogs">
+                    <a class="button2" href="dogs.html">View Our Dogs</a>
+                </div>
+                <div class="cats">
+                    <a class="button3" href="cats.html">View Our Cats</a>
+                </div>
+            </div>
         </nav>
-        <div>
-            <div class="gcse-search"></div>
-        </div>
-    </div>
     <main>
         <section>
         <h2>Addison</h2>
@@ -25,6 +116,18 @@
         <p>
             Addison is a busy, energetic girl who wants to play, play, play! She loves nothing more than playtime with any kind of toy (stuffies, tennis balls, tug toys, you name it!). She brings them to any human in the vicinity to engage with her in a good game of tug, or a game of fetch. A bit of general training would do wonders for this busy lady, and help her harness her energy in a positive way. She's an intelligent gal and super treat motivated so should do great with training! She loves treats so much and can even catch them in mid air. She can be selective about doggie friends, so we recommend a meet and greet if there is another dog in the home. Come meet this gorgeous gal!
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Addison</a></p>
+        <div id="modal">
+            <form>
+                <h2>Submit</h2>
+                <label for="name">Name:</label><br>
+                <input type="text" id="name"><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email"><br>
+                <input type="submit" value="Submit">
+            </form>
+            <div id="closemodal" onclick="CloseModal ();">X</div>
+        </div>
         </section>
         <br>
         <section>
@@ -33,6 +136,7 @@
         <p>
             Chico is an affectionate dog who will climb in your lap and wiggle around for pets. He enjoys playing with toys and particularly tug. This boy is a sensitive soul who needs understanding who would do best in a quiet, adult only home.
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Chico</a></p>
         </section>
         <br>
         <section>
@@ -41,6 +145,7 @@
         <p>
             Dominic is very gentle, very sweet. He lifts his paws to you to seek affection once comfortable with someone. However he is a shy boy who will need a patient adopter to help him feel comfortable and safe.
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Dominic</a></p>
         </section>
         <br>
         <section>
@@ -49,14 +154,16 @@
         <p>
             Kanga is an exuberant, friendly and toy-loving girl. She walks nicely on leash and co-existed fine with another dog. Kanga would be happy in a home that allowed her to play with toys 24/7!
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Kanga</a></p>
         </section>
         <br>
         <section>
         <h2>Missy-Elliot</h2>
         <img src="images/dog5.jpeg" alt="Dog">
         <p>
-            Missy Elliot is here to jam with you! This sweet girl is an independent gal. She's full of vim and vigor and loves to play with toys, even by herself. She likes to play fetch and will wait for a toy to be tossed, wait to long to throw it and she'll let you know. She has a cat-like personality that is and independent free-sprirt. She is fairly low maintenance and a bit of a couch potato. If you're looking for a friend to hang out with who doesn't ask too much from you Missy is your gal. Toss on some tunes and come join Missy Elliot's music today! If you are interested in adopting Missy please reach out to her foster at risson@wanadoo.fr
+            Missy-Elliot is here to jam with you! This sweet girl is an independent gal. She's full of vim and vigor and loves to play with toys, even by herself. She likes to play fetch and will wait for a toy to be tossed, wait to long to throw it and she'll let you know. She has a cat-like personality that is and independent free-sprirt. She is fairly low maintenance and a bit of a couch potato. If you're looking for a friend to hang out with who doesn't ask too much from you Missy is your gal. Toss on some tunes and come join Missy Elliot's music today! If you are interested in adopting Missy please reach out to her foster at risson@wanadoo.fr
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Missy-Elliot</a></p>
         </section>
         <br>
         <section>
@@ -65,6 +172,7 @@
         <p>
             Mojo Jojo is a social and cuddly dog, but also very energetic. He would love a family that will be interested in training and other fun activities to keep him busy.
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Mojo Jojo</a></p>
         </section>
         <br>
         <section>
@@ -73,6 +181,7 @@
         <p>
             Paisley is a shy but sweet pup who enjoys being close to her person for petting and needs a loving and patient owner who can spend time with her to build a special bond. She may like to live with another dog, so bring yours to the shelter to see if they hit it off! For more information or to inquire about adopting Paisley, please contact her foster at: deannapereira17@gmail.com
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Paisley</a></p>
         </section>
         <br>
         <section>
@@ -81,6 +190,7 @@
         <p>
             Pebbles came to us originally through our Waystation Program with a litter of puppies who have all since found their forever homes. Her foster family reported that she is sweet, loves to be pet, and was a great, attentive mom to her babies. She can be a little nervous initially with strangers, so it may take her a moment to warm up to new people at first. She can be helped along with those unsure feelings with some reassurance and some high value treats as well. We believe she would do best in a home with teens or no children, and we recommend a meet and greet if there is a current dog in the home already.
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Pebbles</a></p>
         </section>
         <br>
         <section>
@@ -89,6 +199,7 @@
         <p>
             Vito is a young boy who will do best in a home with a patient adopter willing to help him overcome the bit of worry this sweetie seems to carry with him. He will benefit from general training, and it will also help build and strengthen bonds between him and his new owner. He does truly enjoy spending time with people, and we believe he will truly blossom once given correct training and guidance in his new home. We think he would do best in a home with kids over the age of ten at this time, as he can get quite excitable when he first meets new people. This young boy is just looking for a fresh start, and we're excited to see how truly wonderful this pup's future will be!
         </p>
+        <p><a class="button" onclick="OpenModal ();">Adopt Vito</a></p>
         </section>
     </main>
 </body>
