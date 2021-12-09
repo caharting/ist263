@@ -43,8 +43,8 @@
     .search {flex-basis: 50%; background-color: #0069aa; display: flex;}
     nav a:hover {background-color: #CCCCCC;}
 
-    #modal {
-            position: absolute;
+    #modal1, #modal2, #modal3, #modal4, #modal5, #modal6, #modal7, #modal8, #modal9 {
+            position: relative;
             top: 50%;
             left: 50%;
             width: 200px;
@@ -53,14 +53,15 @@
             margin-top: -120px;
             margin-left: -120px;
             background-color: white;
-            box-shadow: 0px 0px 0px 100vw rgba(0,0,0,0.6);
+            box-shadow: 0px 0px 0px 10000vw rgba(0,0,0,0.6);
             display: none;
         }
-        #closemodal {
+        #closemodal1, #closemodal2, #closemodal3, #closemodal4, #closemodal5, #closemodal6, #closemodal7, #closemodal8, #closemodal9 {
             cursor: pointer;
             position: absolute;
             top: 0;
             right: 0;
+            font-family: 'Spartan', sans-serif;
         }
 
         .button {
@@ -68,6 +69,7 @@
             cursor: pointer;
             padding: 10px;
             border-radius: 1em;
+            font-family: 'Spartan', sans-serif;
         }
         .button a {color: white;}
     </style>
@@ -80,19 +82,75 @@
            }
            else (document.getElementById("navlinks").style.display = "block")
         }
-        function OpenModal() {
-            document.getElementById("modal").style.display = 'block';
+        function OpenModal1() {
+            document.getElementById("modal1").style.display = 'block';
         }
-        function CloseModal() {
-            document.getElementById("modal").style.display = 'none';
+        function CloseModal1() {
+            document.getElementById("modal1").style.display = 'none';
+        }
+
+        function OpenModal2() {
+            document.getElementById("modal2").style.display = 'block';
+        }
+        function CloseModal2() {
+            document.getElementById("modal2").style.display = 'none';
+        }
+
+        function OpenModal3() {
+            document.getElementById("modal3").style.display = 'block';
+        }
+        function CloseModal3() {
+            document.getElementById("modal3").style.display = 'none';
+        }
+
+        function OpenModal4() {
+            document.getElementById("modal4").style.display = 'block';
+        }
+        function CloseModal4() {
+            document.getElementById("modal4").style.display = 'none';
+        }
+
+        function OpenModal5() {
+            document.getElementById("modal5").style.display = 'block';
+        }
+        function CloseModal5() {
+            document.getElementById("modal5").style.display = 'none';
+        }
+
+        function OpenModal6() {
+            document.getElementById("modal6").style.display = 'block';
+        }
+        function CloseModal6() {
+            document.getElementById("modal6").style.display = 'none';
+        }
+
+        function OpenModal7() {
+            document.getElementById("modal7").style.display = 'block';
+        }
+        function CloseModal7() {
+            document.getElementById("modal7").style.display = 'none';
+        }
+
+        function OpenModal8() {
+            document.getElementById("modal8").style.display = 'block';
+        }
+        function CloseModal8() {
+            document.getElementById("modal8").style.display = 'none';
+        }
+
+        function OpenModal9() {
+            document.getElementById("modal9").style.display = 'block';
+        }
+        function CloseModal9() {
+            document.getElementById("modal9").style.display = 'none';
         }
     </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav>
@@ -109,15 +167,15 @@
                 </div>
             </div>
     </nav>
-    <main>
+    <main class="cats">
         <section>
         <h2>Arlo</h2>
-        <img src="images/cat1.jpeg" alt="Cat">
-        <p>
-            Arlo is a shy guy who is still learning how to adjust to his surroundings. He adores other cats, and they truly help him settle into new surroundings, so a home with a sweet, confident cat or two would be a great fit for this guy.
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Arlo</a></p>
-        <div id="modal">
+        <img src="images/cat1.jpeg" alt="Cat" onclick="OpenArlo ();">
+            <p>
+                Arlo is a shy guy who is still learning how to adjust to his surroundings. He adores other cats, and they truly help him settle into new surroundings, so a home with a sweet, confident cat or two would be a great fit for this guy.
+            </p>
+            <p><a class="button" onclick="OpenModal1 ();">Adopt Arlo</a></p>
+        <div id="modal1">
             <form>
                 <h2>Submit</h2>
                 <label for="name">Name:</label><br>
@@ -126,81 +184,169 @@
                 <input type="email" id="email"><br>
                 <input type="submit" value="Submit">
             </form>
-            <div id="closemodal" onclick="CloseModal ();">X</div>
+            <div id="closemodal1" onclick="CloseModal1 ();">X</div>
         </div>
         </section>
         <br>
         <section>
         <h2>Baby</h2>
-        <img src="images/cat2.jpeg" alt="Cat">
-        <p>
-            Baby is a shy sweet cat who likes to sleep all day in 3 or 4 spots he finds around the house. He enjoys sleeping on top of couch cushions, on his favorite soft pillow, or in a kitty bed. He loves getting his head scratched and petted but he does not want to be picked up. He tolerates being around other cats but is a loner and doesn't really play with anyone and just enjoys sleeping on his own. He also has a unique look in that he appears to have eyebrows and has a facial expression like he's surprised! To inquire about adoption, please email his foster at ldbjp@aol.com.
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Baby</a></p>
+        <img src="images/cat2.jpeg" alt="Cat" onclick="OpenBaby ();">
+            <p>
+                Baby is a shy sweet cat who likes to sleep all day in 3 or 4 spots he finds around the house. He enjoys sleeping on top of couch cushions, on his favorite soft pillow, or in a kitty bed. He loves getting his head scratched and petted but he does not want to be picked up. He tolerates being around other cats but is a loner and doesn't really play with anyone and just enjoys sleeping on his own. He also has a unique look in that he appears to have eyebrows and has a facial expression like he's surprised! To inquire about adoption, please email his foster at ldbjp@aol.com.
+            </p>
+            <p><a class="button" onclick="OpenModal2 ();">Adopt Baby</a></p>
+            <div id="modal2">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal2" onclick="CloseModal2 ();">X</div>
+        </div>
         </section>
         <br>
         <section>
         <h2>Cece</h2>
-        <img src="images/cat3.jpeg" alt="Cat">
-        <p>
-            Cece is s beautiful girl who is ready to live a wonderful life. I'd love a family who would feel comfortable letting me live indoors and outdoors. I think playing and running and rolling in the sunshine is so much fun. I enjoy yummy treats and having 2-legged friends.
-If you are wanting to add to your family come adopt me today!
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Cece</a></p>
+        <img src="images/cat3.jpeg" alt="Cat" onclick="OpenCece ();">
+            <p>
+                Cece is s beautiful girl who is ready to live a wonderful life. I'd love a family who would feel comfortable letting me live indoors and outdoors. I think playing and running and rolling in the sunshine is so much fun. I enjoy yummy treats and having 2-legged friends.
+                If you are wanting to add to your family come adopt me today!
+            </p>
+            <p><a class="button" onclick="OpenModal3 ();">Adopt Cece</a></p>
+            <div id="modal3">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal3" onclick="CloseModal3 ();">X</div>
+        </div>
         </section>
         <br>
         <section>
         <h2>Dolly</h2>
-        <img src="images/cat4.jpeg" alt="Cat">
-        <p>
-            Hey there everyone! My name is Dolly and if you are looking for the Purr-fect companion, look no further! I am a super sweet, mild mannered lady who is looking for a forever home. My ideal forever home would have a nice lap for my to curl up in, some delicious wet food for me to snack on and other mild mannered cats (and even dogs!) It takes me a bit to warm up to other animals, but as long as they stay out of my face, we can get along. I had a dog friend in my previous home and I sleep curled up against the dog in my foster home. I am also front declawed. For more information or to inquire about adopting, please contact my foster at: meganmarievmiller@gmail.com
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Dolly</a></p>
+        <img src="images/cat4.jpeg" alt="Cat" onclick="OpenDolly ();">
+            <p>
+                Hey there everyone! My name is Dolly and if you are looking for the Purr-fect companion, look no further! I am a super sweet, mild mannered lady who is looking for a forever home. My ideal forever home would have a nice lap for my to curl up in, some delicious wet food for me to snack on and other mild mannered cats (and even dogs!) It takes me a bit to warm up to other animals, but as long as they stay out of my face, we can get along. I had a dog friend in my previous home and I sleep curled up against the dog in my foster home. I am also front declawed. For more information or to inquire about adopting, please contact my foster at: meganmarievmiller@gmail.com
+            </p>
+            <p><a class="button" onclick="OpenModal4 ();">Adopt Dolly</a></p>
+            <div id="modal4">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal4" onclick="CloseModal4 ();">X</div>
+        </div>
         </section>
         <br>
         <section>
         <h2>Heather</h2>
-        <img src="images/cat5.jpeg" alt="Cat">
-        <p>
-            Heather is a senior girl looking for a quiet place to spend her golden years. She is calm and doesn't ask for much - just a spot to sun herself and maybe a few extra helpings of wet food here and there. She's not interested in cuddles or petting, and is a real independent girl, so you might not see her often, especially at first. Heather currently lives in a room with three other mellow cats, so she would likely do well in a home with others a long as they respected her space. If you have a deck, backyard or patio Heather would love nothing more than to bask out there, since she was an outside cat her whole life.
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Heather</a></p>
+        <img src="images/cat5.jpeg" alt="Cat" onclick="OpenHeather ();">
+            <p>
+                Heather is a senior girl looking for a quiet place to spend her golden years. She is calm and doesn't ask for much - just a spot to sun herself and maybe a few extra helpings of wet food here and there. She's not interested in cuddles or petting, and is a real independent girl, so you might not see her often, especially at first. Heather currently lives in a room with three other mellow cats, so she would likely do well in a home with others a long as they respected her space. If you have a deck, backyard or patio Heather would love nothing more than to bask out there, since she was an outside cat her whole life.
+            </p>
+            <p><a class="button" onclick="OpenModal5 ();">Adopt Heather</a></p>
+            <div id="modal5">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal5" onclick="CloseModal5 ();">X</div>
+        </div>
         </section>
         <br>
         <section>
         <h2>Herbert</h2>
-        <img src="images/cat6.jpeg" alt="Cat">
-        <p>
-            Herbert is a cautious young fella who takes a bit of time to warm up to people. He does seem to do wonderfully around other kitties, and would do best in a home with a confident "helper cat" that would aid in giving him confidence to come out of his shell while he adjusts to his new life.
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Herbert</a></p>
+        <img src="images/cat6.jpeg" alt="Cat" onclick="OpenHerbert ();">
+            <p>
+                Herbert is a cautious young fella who takes a bit of time to warm up to people. He does seem to do wonderfully around other kitties, and would do best in a home with a confident "helper cat" that would aid in giving him confidence to come out of his shell while he adjusts to his new life.
+            </p>
+            <p><a class="button" onclick="OpenModal6 ();">Adopt Herbert</a></p>
+            <div id="modal6">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal6" onclick="CloseModal6 ();">X</div>
+        </div>
         </section>
         <br>
         <section>
         <h2>Oven</h2>
-        <img src="images/cat7.jpeg" alt="Cat">
-        <p>
-            Turn the dial and set the timer, this Oven is pre-heated! Sweet Oven is a tender-heart searching for a family to call his own. He is quiet and reserved but blossoms slowly. He loves yummy treats and a kind person to tell him how handsome he is. He really finds comfort in other cats and would love one in his new family. Come warm up your life by adopting Oven today!
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Oven</a></p>
+        <img src="images/cat7.jpeg" alt="Cat" onclick="OpenOven ();">
+            <p>
+                Turn the dial and set the timer, this Oven is pre-heated! Sweet Oven is a tender-heart searching for a family to call his own. He is quiet and reserved but blossoms slowly. He loves yummy treats and a kind person to tell him how handsome he is. He really finds comfort in other cats and would love one in his new family. Come warm up your life by adopting Oven today!
+            </p>
+            <p><a class="button" onclick="OpenModal7 ();">Adopt Oven</a></p>
+            <div id="modal7">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal7" onclick="CloseModal7 ();">X</div>
+        </div>
         </section>
         <br>
         <section>
         <h2>Poof</h2>
-        <img src="images/cat8.jpeg" alt="Cat">
-        <p>
-            Beautiful Poof! This gorgeous young girl came to us from a home that had way too many cats. Having had very little personal interaction with people, she is still very timid when it comes to us big scary humans. Having lived her whole life around other cats, she needs to have other friendly felines around to help her feel comfortable. She would love to go to a wonderful quiet home, with patient, understanding owners, where she could continue to blossom. For more information or to inquire about adopting Poof, please visit her at St. Hubert's in Madison.
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Poof</a></p>
+        <img src="images/cat8.jpeg" alt="Cat" class="poof" onclick="OpenPoof ();">
+            <p>
+                Beautiful Poof! This gorgeous young girl came to us from a home that had way too many cats. Having had very little personal interaction with people, she is still very timid when it comes to us big scary humans. Having lived her whole life around other cats, she needs to have other friendly felines around to help her feel comfortable. She would love to go to a wonderful quiet home, with patient, understanding owners, where she could continue to blossom. For more information or to inquire about adopting Poof, please visit her at St. Hubert's in Madison.
+            </p>
+            <p><a class="button" onclick="OpenModal8 ();">Adopt Poof</a></p>
+            <div id="modal8">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal8" onclick="CloseModal8 ();">X</div>
+        </div>
         </section>
         <br>
         <section>
         <h2>Whitley</h2>
-        <img src="images/cat9.jpeg" alt="Cat">
-        <p>
-            Whitley is a mellow, quiet guy who is still new to the shelter, and adjusting to being here with us. He seems to do well with other cats, and is currently living in a free roaming situation with a few other kitties. He would likely do bets in a quiet, calm home where he has time to open up and adjust to his new life.
-        </p>
-        <p><a class="button" onclick="OpenModal ();">Adopt Whitley</a></p>
+        <img src="images/cat9.jpeg" alt="Cat" class="whitley" onclick="OpenWhitley ();">
+            <p>
+                Whitley is a mellow, quiet guy who is still new to the shelter, and adjusting to being here with us. He seems to do well with other cats, and is currently living in a free roaming situation with a few other kitties. He would likely do bets in a quiet, calm home where he has time to open up and adjust to his new life.
+            </p>
+            <p><a class="button" onclick="OpenModal9 ();">Adopt Whitley</a></p>
+            <div id="modal9">
+                <form>
+                    <h2>Submit</h2>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name"><br>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email"><br>
+                    <input type="submit" value="Submit">
+                </form>
+                <div id="closemodal9" onclick="CloseModal9 ();">X</div>
+        </div>
         </section>
     </main>
 </body>
